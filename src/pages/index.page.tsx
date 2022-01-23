@@ -1,7 +1,14 @@
-export default function Home() {
+import type { CustomNextPage } from "next";
+import { MainLayout } from "./_Layout";
+
+const Home: CustomNextPage = () => {
   return (
     <div>
-      <div className="text-2xl text-red-500 bg-black">hello world</div>
+      <h1 className="text-red-500">Enter</h1>
     </div>
   );
-}
+};
+
+Home.getLayout = MainLayout;
+
+export default Home;
