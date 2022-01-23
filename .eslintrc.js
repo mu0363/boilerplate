@@ -16,28 +16,20 @@ module.exports = {
   overrides: [
     {
       files: ["*.ts", "*.tsx"], // Your TypeScript files extension
-      parserOptions: {
-        project: ["./tsconfig.json"], // Specify it only for TypeScript files
-      },
+      parserOptions: { project: ["./tsconfig.json"] }, // Specify it only for TypeScript files
     },
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
+    ecmaFeatures: { jsx: true },
     ecmaVersion: 12,
     sourceType: "module",
   },
   settings: {
-    react: {
-      version: "detect",
-    },
+    react: { version: "detect" },
     "import/resolver": {
       typescript: {},
-      node: {
-        extensions: [".ts"],
-      },
+      node: { extensions: [".ts"] },
     },
   },
   plugins: ["react", "@typescript-eslint", "tailwindcss", "import", "unused-imports"],
@@ -46,6 +38,7 @@ module.exports = {
     "sort-imports": 0,
     "import/order": [2, { alphabetize: { order: "asc" } }],
     "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     "@typescript-eslint/naming-convention": [
       "error",
       { selector: "typeAlias", format: ["PascalCase"] },
