@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es2021: true,
@@ -12,6 +13,14 @@ module.exports = {
     "plugin:tailwindcss/recommended",
     "prettier",
   ],
+  overrides: [
+    {
+      files: ["*.ts", "*.tsx"], // Your TypeScript files extension
+      parserOptions: {
+        project: ["./tsconfig.json"], // Specify it only for TypeScript files
+      },
+    },
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -21,6 +30,9 @@ module.exports = {
     sourceType: "module",
   },
   settings: {
+    react: {
+      version: "detect",
+    },
     "import/resolver": {
       typescript: {},
       node: {
@@ -28,18 +40,17 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    "react",
-    "@typescript-eslint",
-    "tailwindcss",
-    "import",
-    "unused-imports",
-  ],
+  plugins: ["react", "@typescript-eslint", "tailwindcss", "import", "unused-imports"],
   rules: {
     "require-jsdoc": "off",
     "sort-imports": 0,
     "import/order": [2, { alphabetize: { order: "asc" } }],
     "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      { selector: "typeAlias", format: ["PascalCase"] },
+      { selector: "variable", types: ["boolean"], format: ["PascalCase"], prefix: ["is", "should", "has"] },
+    ],
     "unused-imports/no-unused-imports": "warn",
     "func-style": ["error", "declaration", { allowArrowFunctions: true }],
     "no-console": ["error", { allow: ["warn", "info", "error"] }],
