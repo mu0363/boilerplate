@@ -18,9 +18,9 @@
   "Next.js page": {
     "prefix": "np",
     "body": [
-      "import type { NextPage } from \"next\";",
+      "import type { CustomNextPage } from \"next\";",
       "",
-      "const ${1:$TM_FILENAME_BASE}: NextPage = () => {",
+      "const ${1:$TM_FILENAME_BASE}: CustomNextPage = () => {",
       "  return (",
       "    <div>",
       "      <h1>Enter</h1>",
