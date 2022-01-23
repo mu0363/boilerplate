@@ -48,6 +48,7 @@ module.exports = {
     "func-style": ["error", "declaration", { allowArrowFunctions: true }],
     "no-console": ["error", { allow: ["warn", "info", "error"] }],
     "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
     "react/jsx-handler-names": [
       "error",
       {
