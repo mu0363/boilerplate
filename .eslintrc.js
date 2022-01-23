@@ -36,11 +36,22 @@ module.exports = {
     "unused-imports",
   ],
   rules: {
-    "react/react-in-jsx-scope": "off",
     "require-jsdoc": "off",
     "sort-imports": 0,
     "import/order": [2, { alphabetize: { order: "asc" } }],
     "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "warn",
+    "func-style": ["error", "declaration", { allowArrowFunctions: true }],
+    "no-console": ["error", { allow: ["warn", "info", "error"] }],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-handler-names": [
+      "error",
+      {
+        eventHandlerPrefix: "handle",
+        eventHandlerPropPrefix: "on",
+        checkLocalVariables: true,
+        checkInlineFunction: true,
+      },
+    ],
   },
 };
