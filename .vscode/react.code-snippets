@@ -1,0 +1,36 @@
+{
+  "React FC": {
+    "prefix": "fc",
+    "body": [
+      "import type { VFC } from \"react\";",
+      "",
+      "export const ${1:$TM_FILENAME_BASE}: VFC = () => {",
+      "  return (",
+      "    <div>",
+      "      <h1>Enter</h1>",
+      "    </div>",
+      "  );",
+      "};",
+      ""
+    ],
+    "description": "React boilerplate"
+  },
+  "Next.js page": {
+    "prefix": "np",
+    "body": [
+      "import type { NextPage } from \"next\";",
+      "",
+      "const ${1:$TM_FILENAME_BASE}: NextPage = () => {",
+      "  return (",
+      "    <div>",
+      "      <h1>Enter</h1>",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:$TM_FILENAME_BASE};",
+      ""
+    ],
+    "description": "Next.js page boilerplate"
+  }
+}
