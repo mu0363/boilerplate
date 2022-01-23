@@ -2,8 +2,8 @@ import type { VFC } from "react";
 
 export const Footer: VFC = () => {
   return (
-    <div>
-      <footer>Footer</footer>
-    </div>
+    <footer>
+      <small>&copy; 20xx example</small>
+    </footer>
   );
 };
