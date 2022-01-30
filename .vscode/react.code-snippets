@@ -19,7 +19,7 @@
     "prefix": "np",
     "body": [
       "import type { CustomNextPage } from \"next\";",
-      "import { MainLayout } from \"pages/_Layout\";",
+      "import { MainLayout } from \"@/pages/_Layout\";",
       "",
       "const ${1:$TM_FILENAME_BASE}: CustomNextPage = () => {",
       "  return (",
