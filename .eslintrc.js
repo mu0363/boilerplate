@@ -49,6 +49,7 @@ module.exports = {
     "no-console": ["error", { allow: ["warn", "info", "error"] }],
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
+    "import/named": "off",
     "react/jsx-handler-names": [
       "error",
       {
